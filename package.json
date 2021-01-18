@@ -1,0 +1,19 @@
+{
+  "name": "projet-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./SCSS/Ohmyfood.scss:./CSS/Ohmyfood.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kln-Vnls/OhmyFood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kln-Vnls/OhmyFood/issues"
+  },
+  "homepage": "https://github.com/Kln-Vnls/OhmyFood#readme"
+}
