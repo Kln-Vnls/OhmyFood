@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Shrikhand";
   src: url("../Fonts/shrikhand/Shrikhand-Regular.otf") format("truetype");
@@ -93,114 +92,83 @@ body {
   margin: 0;
 }
 
-/*Logo_top*/
-.logo {
-  background-color: salmon;
+.logo_header {
+  display: flex;
+  align-items: center;
 }
-
-/*Localisation*/
-.localisation {
+.logo_header .logo {
+  font-family: "Shrikhand";
+}
+.logo_header .return {
   color: #353535;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #eaeaea;
-  border-top: 1px solid #cfcfcf;
-  box-shadow: 0 5px 0 0 #d5d5d5;
-}
-.localisation .map_icon {
-  padding-right: 10px;
+  margin-left: 1rem;
+  text-decoration: none;
 }
 
-/*Déscription*/
-.description {
+.Menu_image {
+  height: 200px;
+  width: 100%;
+}
+
+.img_menu {
+  background-color: blue;
+}
+
+.Menu {
   background-color: #f6f6f6;
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 30px;
 }
-
-.description > p {
-  color: #7d7d7d;
+.Menu h3 {
+  margin: 0;
+  margin-left: 15px;
+  padding-bottom: 3px;
+  padding-top: 20px;
+  font-weight: lighter;
+  font-size: 15px;
+  color: #505050;
 }
-
-/*Fonctionnement*/
-.functioning {
-  padding: 20px;
+.Menu .h3_line {
+  width: 2.5rem;
+  height: 0.2rem;
+  background-color: #99E2D0;
+  margin-left: 15px;
 }
-.functioning .step {
+.Menu_header {
+  font-family: "Shrikhand";
   display: flex;
-  border-radius: 20px;
+  justify-content: space-around;
+  border-radius: 30px 30px 0px 0px;
   background-color: #f6f6f6;
-  box-shadow: 0 0 15px 1px #00000026;
-  align-items: center;
-  margin-bottom: 15px;
-  justify-content: center;
 }
-.functioning .step > .functioning_text {
-  color: black;
-}
-.functioning .step > .i {
-  color: #7e7e7e;
-  margin-right: 20px;
-}
-.functioning .step .i:hover {
-  color: #9356dc;
-}
-
-.step:hover {
-  background-color: #f5edff;
-}
-
-.number {
-  background-color: #9356dc;
-  color: white;
-  border-radius: 100%;
-  height: 20px;
-  width: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/*Restaurants*/
-.Cards {
-  background-color: #f6f6f6;
-  padding: 20px 10px 50px 10px;
-}
-
-.Cards > h2 {
-  margin: 15px;
-}
-
-#Cards_Resto > a {
+.Menu_card {
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
   background-color: white;
-  border-radius: 20px;
-  text-decoration: none;
-  color: black;
-  margin-top: 15px;
   box-shadow: 0 0 20px 1px #00000026;
+  margin: 10px;
+  padding: 10px;
 }
-
-#Cards_Resto > a > img {
-  height: 200px;
-  border-radius: 20px 20px 0 0;
-  object-fit: cover;
-}
-
-.Cards_text {
-  margin: 10px 0 10px 10px;
-}
-.Cards_text h3 {
+.Menu_card h4 {
   margin: 0;
+  margin-top: 5px;
+  font-size: large;
 }
-.Cards_text p {
-  margin: 0;
+.Menu_card span {
+  margin-top: 5px;
 }
-.Cards_text .Cards_icon {
-  color: magenta;
+.Menu_card_bottom {
+  display: flex;
+  justify-content: space-between;
+  color: #505050;
+}
+.Menu_card_bottom_price {
+  font-weight: bold;
+  margin-right: 10px;
+  display: flex;
+}
+.Menu_button {
+  text-align: center;
+  padding: 20px;
 }
 
-/*# sourceMappingURL=Ohmyfood.css.map */
+/*# sourceMappingURL=Restaurants.css.map */

@@ -1,0 +1,54 @@
+.omf_button
+  {
+    background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    border-radius: 25px;
+    padding: 12px 40px 12px 40px;
+    color: white;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: 20px 0 50px 0;
+    position: relative;
+    z-index: 1;
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      box-shadow: 0 8px 16px 0 rgb(0 0 0 / 23%), 0 6px 20px 0 rgb(0 0 0 / 20%);
+      background: linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%));
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 250ms;
+      border-radius: 25px;
+    }
+  }
+
+.like
+{
+  color: #1e1e1e;
+  display: flex;
+  align-items: center;
+  font-size: x-large;
+  &:hover {
+    animation: like 1000ms;
+    transform-origin: 50% bottom;
+    background-color: red;
+  }
+}
+
+@keyframes like
+{
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

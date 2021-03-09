@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./SCSS/Ohmyfood.scss:./CSS/Ohmyfood.css"
+    "sass": "sass --watch ./SCSS/:./CSS/"
   },
   "repository": {
     "type": "git",

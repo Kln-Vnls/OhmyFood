@@ -1,0 +1,38 @@
+/*Footer*/
+
+footer
+{
+  background-color: #353535;
+  padding: 20px;
+  .footer__heading
+  {
+    font-family: 'Shrikhand', sans-serif;
+    margin: 10px 0 0 0;
+    color: white;
+    font-size: initial;
+    font-weight: normal;
+  }
+}
+
+.footer__menu
+{
+  padding: 0;
+  li
+  {
+    list-style: none;
+    margin-bottom: 5px;
+  }
+  .footer_text
+  {
+    color: white;
+    text-decoration: none;
+    font-size: smaller;
+  }
+}
+
+.FooterIcon
+{
+  color: white;
+  font-size: x-small;
+  margin-right: 5px;
+}

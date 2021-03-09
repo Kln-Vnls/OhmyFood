@@ -1,27 +1,97 @@
-@font-face {
-  font-family: 'Shrikhand';
-  src: url("../Fonts/shrikhand/Shrikhand-Regular.otf") format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("Fonts/roboto/Roboto-Light.ttf") format('truetype');
-}
+@import "utils/variables";
+@import "utils/fonts";
+@import "layout/footer";
+@import "components/button";
 
 body{
+  font-family: 'Roboto', sans-serif;
   margin: 0;
+}
+
+/*Logo_top*/
+
+.logo
+{
+  background-color: salmon;
+}
+
+/*Localisation*/
+
+.localisation
+{
+  color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  border-top: 1px solid #cfcfcf;
+  box-shadow: 0 5px 0 0 #d5d5d5;
+  .map_icon
+  {
+    padding-right: 10px;
+  }
+}
+
+/*Déscription*/
+
+.description
+{
+  background-color: #f6f6f6;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 30px;
+}
+
+.description > p
+{
+  color: #7d7d7d;
 }
 
 /*Fonctionnement*/
 
 .functioning
 {
-  background-color: red;
+  padding: 20px;
   .step
   {
     display: flex;
     border-radius: 20px;
+    background-color: #f6f6f6;
+    box-shadow: 0 0 15px 1px #00000026;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center;
+    >.functioning_text
+    {
+      color: black;
+    }
+    >.i
+    {
+    color: #7e7e7e;
+    margin-right: 20px;
+    }
+    .i:hover
+    {
+      color: #9356dc;
+    }
   }
+}
+
+.step:hover
+{
+  background-color: #f5edff;
+}
+
+.number
+{
+  background-color: #9356dc;
+  color: white;
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*Restaurants*/
@@ -57,31 +127,19 @@ body{
   object-fit: cover;
 }
 
-#Cards_Resto > a > div > h3,
-#Cards_Resto > a > div > p
+.Cards_text
 {
   margin: 10px 0 10px 10px;
-}
-
-/*Footer*/
-
-footer{
-  background-color: #353535;
-  padding: 10px;
-  }
-
-  .footer__heading{
-    font-family: 'Shrikhand', sans-serif;
-    margin: 0;
-    color: white;
-  }
-
-    .footer__menu{
-      list-style-type: none;
-      padding: 0;
-  }
-
-  .footer__menu > a
+  h3
   {
-    color: #f6f6f6;
+    margin: 0;
   }
+  p
+  {
+    margin: 0;
+  }
+  .Cards_icon
+  {
+    color: magenta;
+  }
+}
