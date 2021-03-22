@@ -8,8 +8,6 @@ Fonts/roboto/Roboto-Medium.ttf
 Fonts/roboto/Roboto-MediumItalic.ttf
 Fonts/roboto/Roboto-Thin.ttf
 *.ttf
-*.png
-*.jpg
 *.svg
 *.pdf
 *.mp4
