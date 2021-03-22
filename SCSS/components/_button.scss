@@ -30,25 +30,122 @@
     }
   }
 
-.like
-{
-  color: #1e1e1e;
+//Like Button
+.like {
+  position: relative;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
-  font-size: x-large;
+
+  .heart2 {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+  }
+
   &:hover {
-    animation: like 1000ms;
-    transform-origin: 50% bottom;
-    background-color: red;
+    cursor: pointer;
+    overflow: hidden;
+
+    .heart1 {
+      opacity: 0;
+      transition: .5s 0s ease;
+    }
+
+    .heart2 {
+      color: $color-primary;
+      opacity: 1;
+      transition: .5s 0s ease;
+      z-index: 999;
+    }
   }
 }
 
-@keyframes like
+//Loader
+.loadspinner
+{
+  animation: loadspinner 2s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  background-color: rgba(10, 10, 10, .6);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 999;
+
+  &::before
+  {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .spinner-wrapper
+  {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    height: 100px;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    vertical-align: middle;
+    width: 100px;
+
+
+    .spinner-cover
+    {
+      background: #fff;
+      border-radius: 50%;
+      height: 100%;
+      position: relative;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .spinner-bar
+    {
+      animation: spinner 2s linear infinite;
+      background: $color-secondary;
+      border-radius: 100% 0 0;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform-origin: 100% 100%;
+      width: 50%;
+    }
+  }
+}
+
+//Load Spinner animation wrapper
+@keyframes loadspinner
+{
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+//Spinner animation rotate
+@keyframes spinner
 {
   0% {
-    transform: scale(0);
+    background: lighten($color-secondary, 10);
+    transform: rotate(0deg);
   }
+
+  50% {
+    background: $color-secondary;
+    transform: rotate(180deg);
+  }
+
   100% {
-    transform: scale(1);
+    background: lighten($color-secondary, 10);
+    transform: rotate(360deg);
   }
 }

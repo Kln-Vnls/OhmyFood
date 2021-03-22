@@ -69,23 +69,99 @@ footer .footer__heading {
 }
 
 .like {
-  color: #1e1e1e;
+  position: relative;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
-  font-size: x-large;
+}
+.like .heart2 {
+  left: 0;
+  opacity: 0;
+  position: absolute;
 }
 .like:hover {
-  animation: like 1000ms;
-  transform-origin: 50% bottom;
-  background-color: red;
+  cursor: pointer;
+  overflow: hidden;
+}
+.like:hover .heart1 {
+  opacity: 0;
+  transition: 0.5s 0s ease;
+}
+.like:hover .heart2 {
+  color: #9356dc;
+  opacity: 1;
+  transition: 0.5s 0s ease;
+  z-index: 999;
 }
 
-@keyframes like {
+.loadspinner {
+  animation: loadspinner 2s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  background-color: rgba(10, 10, 10, 0.6);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 999;
+}
+.loadspinner::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.loadspinner .spinner-wrapper {
+  border: 5px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  height: 100px;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+  vertical-align: middle;
+  width: 100px;
+}
+.loadspinner .spinner-wrapper .spinner-cover {
+  background: #fff;
+  border-radius: 50%;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+.loadspinner .spinner-wrapper .spinner-bar {
+  animation: spinner 2s linear infinite;
+  background: #ff79da;
+  border-radius: 100% 0 0;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: 100% 100%;
+  width: 50%;
+}
+
+@keyframes loadspinner {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes spinner {
   0% {
-    transform: scale(0);
+    background: #fface8;
+    transform: rotate(0deg);
+  }
+  50% {
+    background: #ff79da;
+    transform: rotate(180deg);
   }
   100% {
-    transform: scale(1);
+    background: #fface8;
+    transform: rotate(360deg);
   }
 }
 body {
@@ -95,7 +171,12 @@ body {
 
 /*Logo_top*/
 .logo {
-  background-color: salmon;
+  text-align: center;
+  padding: 15px;
+}
+.logo img {
+  width: 60%;
+  object-fit: cover;
 }
 
 /*Localisation*/
@@ -125,42 +206,69 @@ body {
 }
 
 /*Fonctionnement*/
-.functioning {
-  padding: 20px;
+aside {
+  flex: 0 0 100%;
+  padding: 30px 10px;
 }
-.functioning .step {
+aside h2 {
+  margin-bottom: 10px;
+  margin-left: 5px;
+  width: 100%;
+}
+aside .functioning {
+  align-content: space-between;
   display: flex;
-  border-radius: 20px;
-  background-color: #f6f6f6;
-  box-shadow: 0 0 15px 1px #00000026;
-  align-items: center;
-  margin-bottom: 15px;
-  justify-content: center;
+  flex-direction: row;
+  flex-flow: nowrap;
+  padding-top: 15px;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
 }
-.functioning .step > .functioning_text {
+aside .functioning_step {
+  background-color: #f6f6f6;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px 0 #c3c3c3;
+  flex: 1 0 auto;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 25px 15px;
+  position: relative;
+  text-decoration: none;
+}
+aside .functioning_step .number {
+  background-color: #9356dc;
+  border-radius: 100%;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  height: 25px;
+  left: -12px;
+  line-height: 1.67;
+  position: absolute;
+  text-align: center;
+  width: 25px;
+}
+aside .functioning_step .icon {
+  display: inline-block;
+  margin: 0 15px;
+  min-width: 30px;
+  color: gray;
+}
+aside .functioning_step .icon i {
+  font-size: 20px;
+}
+aside .functioning_step .functioning_text {
+  font-weight: bold;
   color: black;
 }
-.functioning .step > .i {
-  color: #7e7e7e;
-  margin-right: 20px;
+aside .functioning_step:hover {
+  background-color: #f2eafb;
+  box-shadow: 2px 2px 10px 2px #e4d5f6;
 }
-.functioning .step .i:hover {
+aside .functioning_step:hover .icon {
   color: #9356dc;
-}
-
-.step:hover {
-  background-color: #f5edff;
-}
-
-.number {
-  background-color: #9356dc;
-  color: white;
-  border-radius: 100%;
-  height: 20px;
-  width: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /*Restaurants*/
@@ -190,17 +298,27 @@ body {
   object-fit: cover;
 }
 
+.img_new {
+  background-color: #99E2D0;
+  color: #2c9c81;
+  font-weight: bold;
+  padding: 3px 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 999;
+}
+
 .Cards_text {
-  margin: 10px 0 10px 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 .Cards_text h3 {
   margin: 0;
 }
 .Cards_text p {
   margin: 0;
-}
-.Cards_text .Cards_icon {
-  color: magenta;
 }
 
 /*# sourceMappingURL=Ohmyfood.css.map */

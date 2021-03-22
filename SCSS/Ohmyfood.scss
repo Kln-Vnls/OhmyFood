@@ -12,7 +12,13 @@ body{
 
 .logo
 {
-  background-color: salmon;
+  text-align: center;
+  padding: 15px;
+  img
+  {
+  width: 60%;
+  object-fit: cover;
+  }
 }
 
 /*Localisation*/
@@ -49,49 +55,79 @@ body{
 
 /*Fonctionnement*/
 
-.functioning
-{
-  padding: 20px;
-  .step
-  {
+aside {
+  flex: 0 0 100%;
+  padding: 30px 10px;
+
+  h2 {
+    margin-bottom: 10px;
+    margin-left: 5px;
+    width: 100%;
+  }
+
+  .functioning {
+    align-content: space-between;
     display: flex;
-    border-radius: 20px;
+    flex-direction: row;
+    flex-flow: nowrap;
+    padding-top: 15px;
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .functioning_step {
     background-color: #f6f6f6;
-    box-shadow: 0 0 15px 1px #00000026;
-    align-items: center;
-    margin-bottom: 15px;
-    justify-content: center;
-    >.functioning_text
-    {
+    border-radius: 30px;
+    box-shadow: 0 5px 15px 0 darken(#f6f6f6, 20);
+    flex: 1 0 auto;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 25px 15px;
+    position: relative;
+    text-decoration: none;
+
+
+    .number {
+      background-color: $color_primary;
+      border-radius: 100%;
+      color: #fff;
+      display: block;
+      font-weight: bold;
+      height: 25px;
+      left: -12px;
+      line-height: 1.67;
+      position: absolute;
+      text-align: center;
+      width: 25px;
+    }
+
+    .icon {
+      display: inline-block;
+      margin: 0 15px;
+      min-width: 30px;
+      color: gray;
+
+      i {
+        font-size: 20px;
+      }
+    }
+
+    .functioning_text {
+      font-weight: bold;
       color: black;
     }
-    >.i
-    {
-    color: #7e7e7e;
-    margin-right: 20px;
-    }
-    .i:hover
-    {
-      color: #9356dc;
+
+    &:hover {
+      background-color: lighten($color_primary, 35%);
+      box-shadow: 2px 2px 10px 2px lighten($color_primary, 30%);
+
+      .icon {
+        color: $color_primary;
+      }
     }
   }
-}
-
-.step:hover
-{
-  background-color: #f5edff;
-}
-
-.number
-{
-  background-color: #9356dc;
-  color: white;
-  border-radius: 100%;
-  height: 20px;
-  width: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /*Restaurants*/
@@ -127,9 +163,23 @@ body{
   object-fit: cover;
 }
 
+.img_new
+{
+  background-color: $color-tertiary;
+  color: #2c9c81;
+  font-weight: bold;
+  padding: 3px 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 999;
+}
+
 .Cards_text
 {
-  margin: 10px 0 10px 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
   h3
   {
     margin: 0;
@@ -137,9 +187,5 @@ body{
   p
   {
     margin: 0;
-  }
-  .Cards_icon
-  {
-    color: magenta;
   }
 }
