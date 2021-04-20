@@ -48,6 +48,7 @@ footer .footer__heading {
   margin: 20px 0 50px 0;
   position: relative;
   z-index: 1;
+  outline: none;
 }
 .omf_button:hover::after {
   opacity: 1;
@@ -93,6 +94,166 @@ footer .footer__heading {
   z-index: 999;
 }
 
+@keyframes loadspinner {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes spinner {
+  0% {
+    background: #fface8;
+    transform: rotate(0deg);
+  }
+  50% {
+    background: #ff79da;
+    transform: rotate(180deg);
+  }
+  100% {
+    background: #fface8;
+    transform: rotate(360deg);
+  }
+}
+@keyframes check_box {
+  10% {
+    transform: rotate(-90deg);
+  }
+  20% {
+    transform: rotate(-75deg) scale(1.03);
+  }
+  40% {
+    transform: rotate(-60deg) scale(1.08);
+  }
+  60% {
+    transform: rotate(-45deg) scale(1.15);
+  }
+  80% {
+    transform: rotate(-30deg) scale(1.08);
+  }
+  100% {
+    transform: rotate(5deg) scale(1);
+  }
+}
+@keyframes caption_check_box {
+  0% {
+    opacity: 0.5;
+    transform: translate(50px, 0);
+  }
+  20% {
+    opacity: 0.6;
+    transform: translate(30px, 0);
+  }
+  40% {
+    opacity: 0.7;
+    transform: translate(20px, 0);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translate(15px, 0);
+  }
+  80% {
+    opacity: 0.9;
+    transform: translate(7px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(1px, 0);
+  }
+}
+@keyframes caption_check_box_price {
+  0% {
+    transform: translate(50px, 0);
+  }
+  40% {
+    transform: translate(25px, 0);
+  }
+  70% {
+    transform: translate(12px, 0);
+  }
+  100% {
+    transform: translate(1px, 0);
+  }
+}
+@keyframes loadspinner {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes spinner {
+  0% {
+    background: #fface8;
+    transform: rotate(0deg);
+  }
+  50% {
+    background: #ff79da;
+    transform: rotate(180deg);
+  }
+  100% {
+    background: #fface8;
+    transform: rotate(360deg);
+  }
+}
+@keyframes check_box {
+  10% {
+    transform: rotate(-90deg);
+  }
+  20% {
+    transform: rotate(-75deg) scale(1.03);
+  }
+  40% {
+    transform: rotate(-60deg) scale(1.08);
+  }
+  60% {
+    transform: rotate(-45deg) scale(1.15);
+  }
+  80% {
+    transform: rotate(-30deg) scale(1.08);
+  }
+  100% {
+    transform: rotate(5deg) scale(1);
+  }
+}
+@keyframes caption_check_box {
+  0% {
+    opacity: 0.5;
+    transform: translate(50px, 0);
+  }
+  20% {
+    opacity: 0.6;
+    transform: translate(30px, 0);
+  }
+  40% {
+    opacity: 0.7;
+    transform: translate(20px, 0);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translate(15px, 0);
+  }
+  80% {
+    opacity: 0.9;
+    transform: translate(7px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(1px, 0);
+  }
+}
+@keyframes caption_check_box_price {
+  0% {
+    transform: translate(50px, 0);
+  }
+  40% {
+    transform: translate(25px, 0);
+  }
+  70% {
+    transform: translate(12px, 0);
+  }
+  100% {
+    transform: translate(1px, 0);
+  }
+}
 .loadspinner {
   animation: loadspinner 2s;
   animation-delay: 1s;
@@ -143,26 +304,70 @@ footer .footer__heading {
   width: 50%;
 }
 
-@keyframes loadspinner {
-  100% {
-    opacity: 0;
-    z-index: -10;
+.Menu_card:hover {
+  box-shadow: 0 5px 15px 0 #9d9d9d;
+}
+.Menu_card:hover .Menu_card_bottom_price {
+  animation: caption_check_box_price ease 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  min-width: 50px;
+}
+.Menu_card:hover .caption_check_box {
+  animation: caption_check_box ease 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  background-color: #99E2D0;
+  display: block;
+  max-width: 50px;
+  overflow: hidden;
+  transform-origin: 50% 50%;
+  margin: -10px;
+  padding: 20px;
+}
+.Menu_card:hover .fa-check-circle {
+  animation: check_box ease 0.5s;
+  animation-iteration-count: 1;
+  background-color: #99E2D0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #Cards_Resto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .Cards_Menu {
+    width: 48%;
   }
 }
-@keyframes spinner {
-  0% {
-    background: #fface8;
-    transform: rotate(0deg);
-  }
-  50% {
-    background: #ff79da;
-    transform: rotate(180deg);
-  }
-  100% {
-    background: #fface8;
-    transform: rotate(360deg);
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  aside .functioning {
+    flex-direction: row;
   }
 }
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #Cards_Resto > .Cards_Menu {
+    width: 23%;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .logo > img {
+    width: 0;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -171,17 +376,19 @@ body {
 .logo_header {
   display: flex;
   align-items: center;
+  text-align: center;
 }
 .logo_header .return {
   color: #353535;
   margin-left: 1rem;
   text-decoration: none;
+  font-size: larger;
 }
 
 /*Logo_top*/
 .logo {
-  text-align: center;
   padding: 20px 25px 10px 0;
+  width: 100%;
 }
 .logo img {
   width: 60%;
@@ -190,6 +397,8 @@ body {
 
 .Menu_image {
   width: 100%;
+  height: 400px;
+  object-fit: cover;
 }
 
 .main {
@@ -225,7 +434,6 @@ body {
 }
 .Menu_card {
   display: flex;
-  flex-direction: column;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 0 20px 1px #00000026;
@@ -240,6 +448,9 @@ body {
 .Menu_card span {
   margin-top: 5px;
 }
+.Menu_card_text {
+  width: 100%;
+}
 .Menu_card_bottom {
   display: flex;
   justify-content: space-between;
@@ -249,10 +460,28 @@ body {
   font-weight: bold;
   margin-right: 10px;
   display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  justify-content: flex-end;
+  padding-right: 10px;
+  text-align: right;
 }
 .Menu_button {
   text-align: center;
   padding: 20px;
+}
+
+.caption_check_box {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  display: none;
+  position: relative;
+}
+.caption_check_box i {
+  color: #fff;
+  font-size: 24px;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 /*# sourceMappingURL=Restaurants.css.map */

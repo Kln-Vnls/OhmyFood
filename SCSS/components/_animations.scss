@@ -1,0 +1,95 @@
+@import 'keyframes';
+
+//Loader
+.loadspinner
+{
+  animation: loadspinner 2s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  background-color: rgba(10, 10, 10, .6);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 999;
+
+  &::before
+  {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .spinner-wrapper
+  {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    height: 100px;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    vertical-align: middle;
+    width: 100px;
+
+
+    .spinner-cover
+    {
+      background: #fff;
+      border-radius: 50%;
+      height: 100%;
+      position: relative;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .spinner-bar
+    {
+      animation: spinner 2s linear infinite;
+      background: $color-secondary;
+      border-radius: 100% 0 0;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform-origin: 100% 100%;
+      width: 50%;
+    }
+  }
+}
+
+.Menu_card
+{
+  &:hover {
+    box-shadow: 0 5px 15px 0 darken(#f6f6f6, 35);
+
+    .Menu_card_bottom_price {
+      animation: caption_check_box_price ease .3s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+      min-width: 50px;
+    }
+
+    .caption_check_box {
+      animation: caption_check_box ease .3s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+      background-color: $color_tertiary;
+      display: block;
+      max-width: 50px;
+      overflow: hidden;
+      transform-origin: 50% 50%;
+      margin: -10px;
+      padding: 20px;
+    }
+
+    .fa-check-circle {
+      animation: check_box ease .5s;
+      animation-iteration-count: 1;
+      background-color: $color_tertiary;
+    }
+  }
+}

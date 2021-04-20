@@ -9,6 +9,7 @@
     margin: 20px 0 50px 0;
     position: relative;
     z-index: 1;
+    outline: none;
     &:hover {
       &::after {
         opacity: 1;
@@ -58,94 +59,5 @@
       transition: .5s 0s ease;
       z-index: 999;
     }
-  }
-}
-
-//Loader
-.loadspinner
-{
-  animation: loadspinner 2s;
-  animation-delay: 1s;
-  animation-fill-mode: both;
-  background-color: rgba(10, 10, 10, .6);
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  text-align: center;
-  top: 0;
-  z-index: 999;
-
-  &::before
-  {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-  }
-
-  .spinner-wrapper
-  {
-    border: 5px solid #fff;
-    border-radius: 50%;
-    display: inline-block;
-    height: 100px;
-    overflow: hidden;
-    padding: 10px;
-    position: relative;
-    vertical-align: middle;
-    width: 100px;
-
-
-    .spinner-cover
-    {
-      background: #fff;
-      border-radius: 50%;
-      height: 100%;
-      position: relative;
-      width: 100%;
-      z-index: 2;
-    }
-
-    .spinner-bar
-    {
-      animation: spinner 2s linear infinite;
-      background: $color-secondary;
-      border-radius: 100% 0 0;
-      height: 50%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      transform-origin: 100% 100%;
-      width: 50%;
-    }
-  }
-}
-
-//Load Spinner animation wrapper
-@keyframes loadspinner
-{
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-
-//Spinner animation rotate
-@keyframes spinner
-{
-  0% {
-    background: lighten($color-secondary, 10);
-    transform: rotate(0deg);
-  }
-
-  50% {
-    background: $color-secondary;
-    transform: rotate(180deg);
-  }
-
-  100% {
-    background: lighten($color-secondary, 10);
-    transform: rotate(360deg);
   }
 }

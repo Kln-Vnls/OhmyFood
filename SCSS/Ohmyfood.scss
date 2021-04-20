@@ -2,6 +2,9 @@
 @import "utils/fonts";
 @import "layout/footer";
 @import "components/button";
+@import "components/keyframes";
+@import "components/animations";
+@import "Responsive_OMF";
 
 body{
   font-family: 'Roboto', sans-serif;
@@ -16,7 +19,7 @@ body{
   padding: 15px;
   img
   {
-  width: 60%;
+  width: 50%;
   object-fit: cover;
   }
 }
@@ -56,7 +59,6 @@ body{
 /*Fonctionnement*/
 
 aside {
-  flex: 0 0 100%;
   padding: 30px 10px;
 
   h2 {
@@ -66,12 +68,8 @@ aside {
   }
 
   .functioning {
-    align-content: space-between;
     display: flex;
-    flex-direction: row;
-    flex-flow: nowrap;
     padding-top: 15px;
-    position: relative;
     width: 100%;
     flex-direction: column;
   }
@@ -143,24 +141,35 @@ aside {
   margin:15px;
 }
 
-#Cards_Resto > a
+#Cards_Resto
+{
+  position: relative;
+}
+
+.Cards_Menu
 {
   display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 20px;
-  text-decoration: none;
-  color: black;
   margin-top: 15px;
   box-shadow: 0 0 20px 1px #00000026;
+  position: relative;
 
 }
 
-#Cards_Resto > a > img
+.Cards_Menu > a
+{
+  text-decoration: none;
+  color: black;
+}
+
+.Cards_Menu > a > img
 {
   height: 200px;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
+  width: 100%;
 }
 
 .img_new

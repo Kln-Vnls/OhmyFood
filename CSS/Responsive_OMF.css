@@ -1,0 +1,29 @@
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #Cards_Resto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .Cards_Menu {
+    width: 48%;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  aside .functioning {
+    flex-direction: row;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #Cards_Resto > .Cards_Menu {
+    width: 23%;
+  }
+}
+
+/*# sourceMappingURL=Responsive_OMF.css.map */
