@@ -324,7 +324,7 @@ footer .footer__heading {
   overflow: hidden;
   transform-origin: 50% 50%;
   margin: -10px;
-  padding: 20px;
+  padding: 30px 20px 30px 20px;
 }
 .Menu_card:hover .fa-check-circle {
   animation: check_box ease 0.5s;
@@ -332,33 +332,6 @@ footer .footer__heading {
   background-color: #99E2D0;
 }
 
-/* Extra small devices (phones, 600px and down) */
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  #Cards_Resto {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px;
-  }
-
-  .Cards_Menu {
-    width: 48%;
-  }
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  aside .functioning {
-    flex-direction: row;
-  }
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  #Cards_Resto > .Cards_Menu {
-    width: 23%;
-  }
-}
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -519,5 +492,55 @@ aside .functioning_step:hover .icon {
 .Cards_text p {
   margin: 0;
 }
+
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #Cards_Resto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .Cards_Menu {
+    width: 48%;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  aside .functioning {
+    flex-direction: row;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #Cards_Resto > .Cards_Menu {
+    width: 23%;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .Menu_direction_card {
+    flex-direction: row;
+  }
+
+  .Menu_card {
+    width: -webkit-fill-available;
+  }
+
+  .logo > img {
+    width: 30%;
+  }
+
+  .logo {
+    padding: 20px 30px 20px 0;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 
 /*# sourceMappingURL=Ohmyfood.css.map */

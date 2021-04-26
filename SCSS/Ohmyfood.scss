@@ -4,7 +4,6 @@
 @import "components/button";
 @import "components/keyframes";
 @import "components/animations";
-@import "Responsive_OMF";
 
 body{
   font-family: 'Roboto', sans-serif;
@@ -198,3 +197,6 @@ aside {
     margin: 0;
   }
 }
+
+@import "Responsive_OMF";
+@import "Responsive";

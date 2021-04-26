@@ -4,8 +4,6 @@
 @import "components/button";
 @import "components/keyframes";
 @import "components/animations";
-@import "Responsive_OMF";
-@import "Responsive";
 
 body
 {
@@ -82,6 +80,11 @@ body
     border-top-right-radius: 35px;
     margin-top: -50px;
   }
+  &_direction_card
+  {
+    display: flex;
+    flex-direction: column;
+  }
   &_card
   {
     display: flex;
@@ -143,3 +146,6 @@ body
     transform: rotate(360deg);
   }
 }
+
+@import "Responsive_OMF";
+@import "Responsive";
