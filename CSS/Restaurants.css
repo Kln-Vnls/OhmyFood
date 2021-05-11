@@ -323,7 +323,7 @@ footer .footer__heading {
   overflow: hidden;
   transform-origin: 50% 50%;
   margin: -10px;
-  padding: 30px 20px 30px 20px;
+  padding: 22px;
 }
 .Menu_card:hover .fa-check-circle {
   animation: check_box ease 0.5s;
@@ -451,8 +451,6 @@ body {
   transform: rotate(360deg);
 }
 
-/* Extra small devices (phones, 600px and down) */
-/* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   #Cards_Resto {
@@ -478,9 +476,6 @@ body {
     width: 23%;
   }
 }
-/* Extra small devices (phones, 600px and down) */
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* Medium devices (landscape tablets, 768px and up) */
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .Menu_direction_card {
@@ -499,6 +494,5 @@ body {
     padding: 20px 30px 20px 0;
   }
 }
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 
 /*# sourceMappingURL=Restaurants.css.map */
