@@ -340,7 +340,7 @@ footer .footer__heading {
   overflow: hidden;
   transform-origin: 50% 50%;
   margin: -10px;
-  padding: 22px;
+  padding: 21px;
 }
 .Menu_card:hover .fa-check-circle {
   animation: check_box ease 0.5s;
