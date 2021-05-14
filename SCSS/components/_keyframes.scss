@@ -104,3 +104,14 @@
     transform: translate(1px, 0);
   }
 }
+
+// Fade-in animation
+@keyframes fadein {
+  from {
+    transform: scale(.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}

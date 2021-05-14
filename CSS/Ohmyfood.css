@@ -175,6 +175,14 @@ footer .footer__heading {
     transform: translate(1px, 0);
   }
 }
+@keyframes fadein {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 @keyframes loadspinner {
   100% {
     opacity: 0;
@@ -253,6 +261,14 @@ footer .footer__heading {
   }
   100% {
     transform: translate(1px, 0);
+  }
+}
+@keyframes fadein {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
   }
 }
 .loadspinner {
